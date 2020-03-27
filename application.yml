@@ -1,1 +1,6 @@
-default.value: "Default value for all services"
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: tms
