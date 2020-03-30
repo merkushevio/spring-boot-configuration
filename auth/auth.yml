@@ -1,3 +1,6 @@
 spring:
-  application:
-    name: auth
+  data:
+    mongodb:
+      uri: mongodb://${DB_HOST}:27017/oauth
+  jackson:
+    property-naming-strategy: SNAKE_CASE
