@@ -1,6 +1,7 @@
+server:
+  port: 9191
+
 spring:
   data:
     mongodb:
-      uri: mongodb://${DB_HOST}:27017/oauth
-  jackson:
-    property-naming-strategy: SNAKE_CASE
+      uri: mongodb://localhost:27017/oauth
