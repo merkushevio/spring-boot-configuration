@@ -4,3 +4,12 @@ spring:
       uri: mongodb://localhost:27017/temp
   jackson:
     property-naming-strategy: SNAKE_CASE
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${server.port}:${spring.application.instance_id:${random.int[1, 10000]}}
+  client:
+    fetchRegistry: true
+    registryFetchIntervalSeconds: 60
+    serviceUrl:
+      defaultZone: http://localhost:8282/eureka
