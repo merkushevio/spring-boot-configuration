@@ -5,3 +5,12 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/tms
+
+security:
+  oauth2:
+    resource:
+      base-uri: http://localhost:9191
+      token-info-uri: ${security.oauth2.resource.base-uri}/oauth/check_token
+    client:
+      client-id: '{cipher}687b7301dbb891ea8c1a38fe957b74e365bd06f187e354f055611524988b6499'
+      client-secret: '{cipher}d1e61e4ac8516cfb920a0d15fd0d42880c119ed5093e65bd43cc88a53832ef35'

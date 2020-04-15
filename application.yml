@@ -7,9 +7,13 @@ spring:
 
 eureka:
   instance:
-    instance-id: ${spring.application.name}:${server.port}:${spring.application.instance_id:${random.int[1, 10000]}}
+    instance-id: ${spring.application.name}:${server.port}:${spring.application.instance_id:${random.value}}
   client:
     fetchRegistry: true
     registryFetchIntervalSeconds: 60
     serviceUrl:
       defaultZone: http://localhost:8282/eureka
+
+logging:
+  file:
+    name: "${spring.application.name}.log"
