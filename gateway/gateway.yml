@@ -4,7 +4,7 @@ server:
 security:
   oauth2:
     resource:
-      base-uri: http://localhost:9191
+      base-uri: http://users
       token-info-uri: ${security.oauth2.resource.base-uri}/oauth/check_token
     client:
       client-id: '{cipher}f3261005a7d2ae9ed0e2c56d85279d80126b6cb9d2ecffb6d25d8be6bac456b5'
